@@ -26,12 +26,6 @@ height_fog = editor_filter_lib.by_class( actors, unreal.ExponentialHeightFog )
 sky = editor_filter_lib.by_actor_label( actors, "sky" )
 
 blueprints = editor_filter_lib.by_actor_label( actors, "BP_" )
-bp_interactable = editor_filter_lib.by_actor_label( actors, "BP_InteractablePoint" )
-bp_ip = editor_filter_lib.by_actor_label( actors, "BP_IP_" )
-bp_teleport = editor_filter_lib.by_actor_label( actors, "BP_Teleport_" )
-bp_tp = editor_filter_lib.by_actor_label( actors, "BP_TP_" )
-bp_hotspot = editor_filter_lib.by_actor_label( actors, "BP_HotSpot" )
-bp_h = editor_filter_lib.by_actor_label( actors, "BP_H_" )
 
 moved = 0
 
@@ -40,12 +34,6 @@ mapping = {
     "Meshes" : static_meshes,
     "ReflectionCaptures" : reflection_cap,
     "Blueprints" : blueprints,
-    "Blueprints/Configs" : bp_ip,
-    "Blueprints/Configs" : bp_interactable,
-    "Blueprints/Teleports" : bp_teleport,
-    "Blueprints/Teleports" : bp_tp,
-    "Blueprints/Hotspots" : bp_h,
-    "Blueprints/Hotspots" : bp_hotspot,
     "Cameras" : cine_camera,
     "Datasmith" : ds_scene,
     "Gameplay": player_start,
@@ -71,4 +59,4 @@ for folder_name in mapping:
         
         moved += 1
 
-unreal.log("Moved {} actors into respective folders".format(moved))
+unreal.log("{} actors moved".format(moved))
