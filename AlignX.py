@@ -13,7 +13,7 @@ align_to = selected_actors[0].get_actor_location().x
 i = 0
 
 # begin Undo recording
-sys_lib.begin_transaction("Py_util", "Distribute X", None)
+sys_lib.begin_transaction("Py_util", "Align X", None)
 
 # loop through actors
 for actor in selected_actors:
